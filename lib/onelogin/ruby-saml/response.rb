@@ -325,7 +325,7 @@ module OneLogin
       # returns the allowed clock drift on timing validation
       # @return [Integer]
       def allowed_clock_drift
-        return options[:allowed_clock_drift] || 0
+        return options[:allowed_clock_drift] || 120
       end
 
       private
@@ -352,13 +352,13 @@ module OneLogin
           :validate_one_conditions,
           :validate_conditions,
           :validate_one_authnstatement,
-          :validate_audience,
+          # :validate_audience,
           :validate_destination,
           :validate_issuer,
           :validate_session_expiration,
           :validate_subject_confirmation,
-          :validate_name_id,
-          :validate_signature
+          :validate_name_id
+          # :validate_signature
         ]
 
         if collect_errors
