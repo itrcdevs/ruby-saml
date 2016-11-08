@@ -63,7 +63,7 @@ module OneLogin
       # @return [Boolean] TRUE if the SAML Response is valid
       #
       def is_valid?(collect_errors = false)
-        # validate(collect_errors)
+        validate(collect_errors)
       end
 
       # @return [String] the NameID provided by the SAML response from the IdP.
